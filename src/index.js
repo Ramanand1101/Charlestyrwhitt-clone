@@ -17,6 +17,10 @@ app.use('/users',userRoute);
 app.use('/products',postRoute);
 app.use('/orders',orderRoute);
 
+app.get("/",(req,res)=>{
+    res.send("Home-Page")
+})
+
 app.listen(port, async () => {
     try {
         await connection;
